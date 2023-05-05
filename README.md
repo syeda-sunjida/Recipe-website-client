@@ -5,3 +5,6 @@
 5. there is a footer section
 6. there is a blog section that can be save into pdf also
 7. u must have to log in to see recipes
+8. here is client site live link : https://bangali-recipe-client.web.app/
+9. here is server site link: https://bangali-recipe-server-syeda-sunjida.vercel.app/all
+
