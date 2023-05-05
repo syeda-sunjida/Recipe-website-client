@@ -15,6 +15,12 @@ import Blog from './Components/Blog';
 // import AuthProvider from './Providers/AuthProvider';
 import Register from './Components/Register';
 import AuthProvider from './Providers/AuthProvider';
+import OurChef from './Components/OurChef';
+import ChefCard from './Components/ChefCard';
+import RecipeCard from './Components/RecipeCard';
+import Recipes from './Components/Recipes';
+import ExtraOne from './Components/ExtraOne';
+import PrivateRoute from './Components/PrivateRoute';
 // import App from './App';
 const router = createBrowserRouter([
   {
@@ -23,7 +29,24 @@ const router = createBrowserRouter([
     children:[
       {
       path: '/',
-      element: <Home></Home>
+      element: <Home></Home>,
+        loader: async () => {
+          try {
+            
+
+            const chefsData = await fetch('https://bangali-recipe-server-syeda-sunjida.vercel.app/all');
+            const chefs = await chefsData.json();
+            // console.log(chefsData)
+    
+    
+            return {
+              
+              chefs: chefs,
+            };
+          } catch (err) {
+            console.log(err);
+          }
+        }
       },
       {
         path: '/login',
@@ -40,6 +63,27 @@ const router = createBrowserRouter([
       {
         path: '/Navbar',
         element: <Navbar></Navbar>
+      },
+      {
+        path: '/ourChef',
+        element: <OurChef></OurChef>
+      },
+      {
+        path: '/chefCard',
+        element: <ChefCard></ChefCard>
+      },
+      {
+        path: '/recipeCard',
+        element: <RecipeCard></RecipeCard>
+      },
+      {
+        path: '/recipes/:id',
+        element: <PrivateRoute><Recipes></Recipes></PrivateRoute>,
+        loader : ({params})=> fetch(`https://bangali-recipe-server-syeda-sunjida.vercel.app/all/${params.id}`)
+      },
+      {
+        path: '/extraone',
+        element: <ExtraOne></ExtraOne>
       },
       {
         path: '/footer',

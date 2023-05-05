@@ -1,6 +1,9 @@
 import React, { useRef } from "react";
 import { FaDownload } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
+import ReactToPdf from "react-to-pdf"
+
+
 
 const Blog = () => {
   const ref = useRef();
@@ -12,7 +15,7 @@ const Blog = () => {
 
   return (
     <div>
-      {/* <div className="mt-6 text-end mr-6">
+      <div className="mt-6 text-end mr-6">
         <ReactToPdf targetRef={ref} options={options} filename="blog.pdf">
           {({ toPdf }) => (
             <button className="btn btn-success " onClick={toPdf}>
@@ -21,7 +24,8 @@ const Blog = () => {
             </button>
           )}
         </ReactToPdf>
-      </div> */}
+      </div>
+      
       <div ref={ref}>
         <div className="mt-12 mx-10  rounded p-5">
           <div>

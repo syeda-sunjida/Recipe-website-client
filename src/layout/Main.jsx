@@ -5,6 +5,7 @@ import Footer from '../Components/Footer';
 import Login from '../Components/Login';
 import Blog from '../Components/Blog';
 import Register from '../Components/Register';
+import ExtraOne from '../Components/ExtraOne';
 
 const Main = () => {
     return (
@@ -14,6 +15,7 @@ const Main = () => {
             <Register></Register>
             <Blog></Blog> */}
             <Outlet></Outlet>
+            <ExtraOne></ExtraOne>
             <Footer></Footer>
         </div>
     );
