@@ -1,5 +1,5 @@
 import React from "react";
-// import { Marquee } from "react-marquee-slider";
+
 
 import LazyLoad from 'react-lazy-load';
 
