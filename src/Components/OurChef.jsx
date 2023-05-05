@@ -11,7 +11,7 @@ const OurChef = () => {
   return (
     <div className="container mx-auto">
       <h2 className="md:text-6xl text-2xl my-10 text-center font-bold">
-        Our Chefs
+        Amader Radhunira
       </h2>
 
       <div className="container md:grid grid-cols-3  gap-10 md:my-20">
