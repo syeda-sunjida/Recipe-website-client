@@ -12,7 +12,7 @@ import Login from './Components/Login';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import Blog from './Components/Blog';
-// import AuthProvider from './Providers/AuthProvider';
+
 import Register from './Components/Register';
 import AuthProvider from './Providers/AuthProvider';
 import OurChef from './Components/OurChef';
@@ -21,7 +21,7 @@ import RecipeCard from './Components/RecipeCard';
 import Recipes from './Components/Recipes';
 import ExtraOne from './Components/ExtraOne';
 import PrivateRoute from './Components/PrivateRoute';
-// import App from './App';
+
 const router = createBrowserRouter([
   {
     path: "/",
